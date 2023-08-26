@@ -1,2 +1,2 @@
 # cc-hpc
-Collatz Conjecture HPC
+Collatz conjecture HPC
