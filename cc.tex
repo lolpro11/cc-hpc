@@ -1,1 +1,34 @@
- 
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+
+%opening
+\title{3x+1 Problem}
+\author{Joshua Wong}
+
+\begin{document}
+
+\maketitle
+    The Collatz conjecture, also known as the \(3x+1\) problem is defined as:
+  \[
+    f(x) = \left.
+    \begin{cases}
+        x/2, & \text{if } x = 0 {\pmod {2}}\\
+        3x+1, & \text{if } x = 1 {\pmod {2}} \\
+        \end{cases}
+    \right\}, x \in \mathbb{N{^+}}
+  \]
+  Or the "shortcut" version:
+  \[
+    f(x) = \left.
+    \begin{cases}
+        x/2, & \text{if } x = 0 {\pmod {2}}\\
+        (3x+1)/2, & \text{if } x = 1 {\pmod {2}} \\
+        \end{cases}
+    \right\}, x \in \mathbb{N{^+}}
+  \]
+  This process will eventually reach the number 1, regardless of which positive integer is chosen initially. \\ \\
+  %Let x be a
+  %We can duduce that the Collatz conjecture will lead to
+\end{document}
