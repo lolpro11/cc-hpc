@@ -2,7 +2,6 @@
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb}
-
 %opening
 \title{3x+1 Problem}
 \author{Joshua Wong}
@@ -10,7 +9,7 @@
 \begin{document}
 
 \maketitle
-  The Collatz conjecture, also known as the \(3x+1\) problem, is defined as:
+  The Collatz Problem, also known as the \(3x+1\) problem, is defined as:
   \[
     c(x) = \left.
     \begin{cases}
@@ -29,17 +28,23 @@
     \right\}, x \in \mathbb{N{^+}}
   \]
   This process will eventually reach the number 1, regardless of which positive integer is chosen initially.
-  \section{Proving odd inputs of Collatz Conjecture are even}
+  \section{Proving odd inputs of Problem are even}
   The second part of the Collatz Conjecture (3x+1) applies to every number in the set: \(\{ x \in \mathbb{N{^+}} \ | \ 2x+1 \}\). \\
   Let c be a random number from this set. \(c(c) = 3(2x+1)+1 \) \\
   Factor out the variables: \(6x+3+1 = 6x+4 = 2(3x+2)\) \\
   Since the expression does not follow the form for an odd number, \(2x+1\), it is an even number.
-  Therefore, all odd inputs of Collatz Conjecture are even.
-  \section{Proving the Collatz Conjecture for the set $2^{n}$}
+  Therefore, all odd inputs of the Collatz Conjecture are even.
+  \section{Proving the Collatz Problem for the set $2^{n}$}
   \(\{x \in \mathbb{N{^+}}: 2{^x}\}\) \\
   In this case, \(c^{(log_2{x})}(x) = 1\). \\
   Ex. \(x = 2, c(2) = \frac{2}{2} = 1\) \\
   Therefore, the conjecture for the set $2^{n}$ is true.
+  \section{Finding functions $c{^2}(x)$ and beyond}
+  Since $c(x)$ is a recursive function, we can repersent it as $c(c(x))$ or $c{^2}(x)$ and beyond.
+  Let's start with the case of \(\{x \in \mathbb{N{^+}} \ | \ 2x+1\}\) \\
+  \(c^2(x) = \frac{3x+1}{2}\) \\
+  Using the proof discussed earlier, as odd inputs of \(c(x)\) always return a even value, we can deduce that \(c^2(x) = \frac{3x+1}{2}, x \in \mathbb{N{^+}} \ | \ 2x+1\).
+
   %$x * \prod\limits_{i=1}^{\log_2{x}} $
   %Let \(c\) be any number within \(\{\mathbb{N{^+}}\ | \ c = 0 \pmod {2} \}\). We put \(c\) into the \\ Collatz function \(c(c) = c/2 \). If \(c\) is even, then
   %We can duduce that the Collatz conjecture will lead to
