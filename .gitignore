@@ -2,3 +2,5 @@ credentials.json
 tokens.json
 target/
 *.log
+cc.aux
+cc.synctex.gz

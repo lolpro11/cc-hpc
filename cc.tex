@@ -10,9 +10,9 @@
 \begin{document}
 
 \maketitle
-    The Collatz conjecture, also known as the \(3x+1\) problem is defined as:
+  The Collatz conjecture, also known as the \(3x+1\) problem, is defined as:
   \[
-    f(x) = \left.
+    c(x) = \left.
     \begin{cases}
         x/2, & \text{if } x = 0 {\pmod {2}}\\
         3x+1, & \text{if } x = 1 {\pmod {2}} \\
@@ -21,14 +21,20 @@
   \]
   Or the "shortcut" version:
   \[
-    f(x) = \left.
+    s(x) = \left.
     \begin{cases}
         x/2, & \text{if } x = 0 {\pmod {2}}\\
         (3x+1)/2, & \text{if } x = 1 {\pmod {2}} \\
         \end{cases}
     \right\}, x \in \mathbb{N{^+}}
   \]
-  This process will eventually reach the number 1, regardless of which positive integer is chosen initially. \\ \\
-  %Let x be a
+  This process will eventually reach the number 1, regardless of which positive integer is chosen initially.
+  \section{Proving the Collatz Conjecture for the set $2^{n}$}
+  \(\{x \in \mathbb{N{^+}}: 2{^x}\}\) \\
+  In this case, \(c^{(log_2{x})}(x) = 1\). \\
+  Ex. \(x = 2, c(2) = \frac{2}{2} = 1\) \\
+  Therefore, the conjecture for the set $2^{n}$ is true.
+  %$x * \prod\limits_{i=1}^{\log_2{x}} $
+  %Let \(c\) be any number within \(\{\mathbb{N{^+}}\ | \ c = 0 \pmod {2} \}\). We put \(c\) into the \\ Collatz function \(c(c) = c/2 \). If \(c\) is even, then
   %We can duduce that the Collatz conjecture will lead to
 \end{document}
