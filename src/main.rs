@@ -18,13 +18,14 @@ fn main() -> io::Result<()> {
     //340282366920938463463374607431768211456
     let mut children = vec![];
     for i in 0..num_threads {
+        let factor: BigUint = 134217728.to_biguint().unwrap();
         let mut sec: BigUint = 1.to_biguint().unwrap();
         if i == 0 {
             sec = 1.to_biguint().unwrap();
         } else {
-            sec = (i.to_biguint().unwrap() * 134217728.to_biguint().unwrap()) + 1.to_biguint().unwrap();
+            sec = (i.to_biguint().unwrap() * factor.clone()) + 1.to_biguint().unwrap();
         }
-        let end: BigUint = (i + 1).to_biguint().unwrap() * 1_000_000_000.to_biguint().unwrap();
+        let end: BigUint = (i + 1).to_biguint().unwrap() * factor.clone();
         children.push(thread::spawn(move || {
             let mut num = sec.clone();
             let file_path = format!("./numbers/{}-{}.txt", sec.to_str_radix(10).as_str(), end.to_str_radix(10).as_str());
