@@ -9,6 +9,7 @@ fn main() -> io::Result<()> {
     let mut file = File::open("number.txt")?;
     let mut buffer = String::new();
     file.read_to_string(&mut buffer)?;
+    fs::create_dir_all("./odd-numbers/")?;
 
     let number: BigUint = buffer.trim().parse().expect("Failed to parse number");
 
@@ -28,7 +29,7 @@ fn main() -> io::Result<()> {
         let end: BigUint = (i + 1).to_biguint().unwrap() * 1_000_000_000.to_biguint().unwrap();
         children.push(thread::spawn(move || {
             let mut num = sec.clone();
-            let file_path = format!("./oddnumbers/{}-{}.txt", sec.to_str_radix(10).as_str(), end.to_str_radix(10).as_str());
+            let file_path = format!("./odd-numbers/{}-{}.txt", sec.to_str_radix(10).as_str(), end.to_str_radix(10).as_str());
             let mut file = OpenOptions::new()
                 .create_new(true)
                 .write(true)

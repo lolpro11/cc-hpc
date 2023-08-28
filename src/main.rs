@@ -9,6 +9,7 @@ fn main() -> io::Result<()> {
     let mut file = File::open("number.txt")?;
     let mut buffer = String::new();
     file.read_to_string(&mut buffer)?;
+    fs::create_dir_all("./numbers/")?;
 
     let number: BigUint = buffer.trim().parse().expect("Failed to parse number");
 
