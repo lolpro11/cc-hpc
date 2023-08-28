@@ -12,10 +12,8 @@ fn main() -> io::Result<()> {
     fs::create_dir_all("./numbers/")?;
 
     let number: BigUint = buffer.trim().parse().expect("Failed to parse number");
-
-    let pool = ThreadPool::new(16);
     println!("Number read from file: {}", number);
-    let num_threads = 16 - 1;
+    let num_threads = 32;
     //let big: BigUint = BigUint::new([6, 5, 5, 3, 6].to_vec());
     //340282366920938463463374607431768211456
     let mut children = vec![];
@@ -24,7 +22,7 @@ fn main() -> io::Result<()> {
         if i == 0 {
             sec = 1.to_biguint().unwrap();
         } else {
-            sec = (i.to_biguint().unwrap() * 1_000_000_000.to_biguint().unwrap()) + 1.to_biguint().unwrap();
+            sec = (i.to_biguint().unwrap() * 134217728.to_biguint().unwrap()) + 1.to_biguint().unwrap();
         }
         let end: BigUint = (i + 1).to_biguint().unwrap() * 1_000_000_000.to_biguint().unwrap();
         children.push(thread::spawn(move || {
@@ -48,9 +46,9 @@ fn main() -> io::Result<()> {
                         temp_num = temp_num / 2.to_biguint().unwrap();
                         s.push_str(format!(" {}", temp_num.to_str_radix(10)).as_str());
                     }
-                    //if temp_num <= num {
-                        //break;
-                    //}
+                    if temp_num <= num {
+                        break;
+                    }
                 }
                 if num >= end {
                     break;
