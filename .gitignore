@@ -5,3 +5,4 @@ target/
 cc.aux
 cc.synctex.gz
 numbers/*
+oddnumbers/*
