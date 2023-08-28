@@ -4,3 +4,4 @@ target/
 *.log
 cc.aux
 cc.synctex.gz
+numbers/*
