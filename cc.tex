@@ -41,19 +41,24 @@
   Therefore, the conjecture for the set $2^{n}$ is true.
   \section{Finding functions $c{^2}(x)$ and beyond}
   Since $c(x)$ is a recursive function, we can repersent it as $c(c(x))$ or $c{^2}(x)$ and beyond.
-  Let's start with the case of \(\{x \in \mathbb{N{^+}} \ | \ 2x+1\}\) \\
+  Let's start with the case of \(\{x \in \mathbb{N{^+}} : 2x+1\}\) \\
   \(c^2(x) = \frac{3x+1}{2}\) \\
   Using the proof discussed earlier, as odd inputs of \(c(x)\) always return a even value, we can deduce that \(c^2(x) = \frac{3x+1}{2}, x \in \mathbb{N{^+}} \ | \ 2x+1\).
   \section{Finding the worst case number for $3x+1$}
   Given a number \(\{x \in \mathbb{N{^+}}: 2x + 1\}\) after \(t(x) = \frac{3x+1}{2}\) will still be part of this set, over time, the number will look like this (change infinity to one less times you should run the Collatz shortcut function).
   \[
-     \frac{3x+1}{2}+\sum_{i=1}^{\infty} \frac{3^{i}x+3^{i}}{2^{(i+1)}}
+    w^{r}(x) = \frac{3x+1}{2}+\sum_{i=1}^{r-1} \frac{3^{i}x+3^{i}}{2^{(i+1)}}
   \]
   Example: 31
   \[
-     \frac{3x+1}{2}+\sum_{i=1}^{5-1} \frac{3^{i}x+3^{i}}{2^{(i+1)}} = 242
+     w^{5}(31) = \frac{3x+1}{2}+\sum_{i=1}^{5-1} \frac{3^{i}x+3^{i}}{2^{(i+1)}} = 242
   \]
-  Since this leads to an even number, this does not break the Collatz Conjecture.
+  Since 31 leads to an even number, it will not break the Collatz Conjecture.
+  \section{Finding the average case number for $3x+1$}
+  Given a number \(\{x \in \mathbb{N{^+}}: 2x + 1\}\)
+  \section{Finding the prime factors  for $3x+1=2^n$}
+  Is there a pattern when it comes to prime factors of numbers of this format?
+  \(\{x \in N{^+} : \log_2{(3x+1)}=n, n \in N^+\}\)
   %$x * \prod\limits_{i=1}^{\log_2{x}} $
   %Let \(c\) be any number within \(\{\mathbb{N{^+}}\ | \ c = 0 \pmod {2} \}\). We put \(c\) into the \\ Collatz function \(c(c) = c/2 \). If \(c\) is even, then
   %We can duduce that the Collatz conjecture will lead to
