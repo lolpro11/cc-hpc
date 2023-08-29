@@ -3,19 +3,26 @@
 version = 3
 
 [[package]]
-name = "CSEE"
+name = "autocfg"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
+
+[[package]]
+name = "cc-hpc"
 version = "0.1.0"
 dependencies = [
+ "evalexpr",
  "num-bigint",
  "num-traits",
  "threadpool",
 ]
 
 [[package]]
-name = "autocfg"
-version = "1.1.0"
+name = "evalexpr"
+version = "11.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
+checksum = "1e757e796a66b54d19fa26de38e75c3351eb7a3755c85d7d181a8c61437ff60c"
 
 [[package]]
 name = "hermit-abi"

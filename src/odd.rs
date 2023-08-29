@@ -1,7 +1,6 @@
 use std::{fs::{File, OpenOptions}, io::{Read, self, Write}};
 use num_bigint::{BigUint, ToBigUint};
 use num_traits::Euclid;
-use threadpool::ThreadPool;
 use std::thread;
 use std::fs;
 
@@ -13,7 +12,6 @@ fn main() -> io::Result<()> {
 
     let number: BigUint = buffer.trim().parse().expect("Failed to parse number");
 
-    let pool = ThreadPool::new(16);
     println!("Number read from file: {}", number);
     let num_threads = 16 - 1;
     //let big: BigUint = BigUint::new([6, 5, 5, 3, 6].to_vec());

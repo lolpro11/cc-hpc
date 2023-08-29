@@ -1,7 +1,6 @@
 use std::{fs::{File, OpenOptions}, io::{Read, self, Write}};
 use num_bigint::{BigUint, ToBigUint};
 use num_traits::Euclid;
-use threadpool::ThreadPool;
 use std::thread;
 use std::fs;
 
@@ -64,7 +63,6 @@ fn main() -> io::Result<()> {
         }));
     }
     for child in children {
-        // Wait for the thread to finish. Returns a result.
         let _ = child.join();
     }
     Ok(())

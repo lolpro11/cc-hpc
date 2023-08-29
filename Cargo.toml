@@ -1,5 +1,5 @@
 [package]
-name = "CSEE"
+name = "cc-hpc"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,7 +9,7 @@ edition = "2021"
 num-bigint = "0.4.4"
 num-traits = "*"
 threadpool = "1.8.1"
-
+evalexpr = "11.1.0"
 [[bin]]
 name = "cc"
 path = "src/main.rs"
@@ -17,3 +17,11 @@ path = "src/main.rs"
 [[bin]]
 name = "odd"
 path = "src/odd.rs"
+
+[[bin]]
+name = "log"
+path = "src/log.rs"
+
+[[bin]]
+name = "one"
+path = "src/one.rs"
