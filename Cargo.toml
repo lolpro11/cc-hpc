@@ -18,9 +18,19 @@ path = "src/main.rs"
 name = "odd"
 path = "src/odd.rs"
 
+
+[[bin]]
+name = "oddi"
+path = "src/oddi.rs"
+
 [[bin]]
 name = "log"
 path = "src/log.rs"
+
+
+[[bin]]
+name = "mersenne"
+path = "src/mersenne.rs"
 
 [[bin]]
 name = "one"

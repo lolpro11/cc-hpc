@@ -6,3 +6,5 @@ cc.aux
 cc.synctex.gz
 numbers/*
 oddnumbers/*
+odd-numbers/*
+mersenne-numbers/*
