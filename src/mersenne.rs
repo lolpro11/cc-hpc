@@ -50,11 +50,11 @@ fn main() -> io::Result<()> {
                         //break;
                     //}
                 }
-                if iterator >= end {
+                if iterator ==  end.clone() + 2.to_biguint().unwrap() {
                     break;
                 }
                 s.push_str(format!("{} {}\n", num.to_str_radix(10), x.to_string()).as_str());
-                if iterator.clone() % 2.to_biguint().unwrap() == 0.to_biguint().unwrap() {
+                if iterator.clone() % 50.to_biguint().unwrap() == 0.to_biguint().unwrap() {
                     file.write(s.as_bytes()).unwrap();
                     s = "".to_string()
                 }
