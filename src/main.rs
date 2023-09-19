@@ -18,7 +18,7 @@ fn main() -> io::Result<()> {
     let mut children = vec![];
     for i in 0..num_threads {
         let factor: BigUint = 134217728.to_biguint().unwrap();
-        let mut sec: BigUint = 1.to_biguint().unwrap();
+        let sec: BigUint;
         if i == 0 {
             sec = 1.to_biguint().unwrap();
         } else {

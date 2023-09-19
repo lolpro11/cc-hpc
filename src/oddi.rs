@@ -18,7 +18,7 @@ fn main() -> io::Result<()> {
     //340282366920938463463374607431768211456
     let mut children = vec![];
     for i in 0..num_threads {
-        let mut sec: BigUint = 1.to_biguint().unwrap();
+        let sec: BigUint;
         if i == 0 {
             sec = 1.to_biguint().unwrap();
         } else {
