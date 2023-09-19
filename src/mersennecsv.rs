@@ -55,7 +55,7 @@ fn main() -> io::Result<()> {
                 if iterator ==  end.clone() + 2.to_biguint().unwrap() {
                     break;
                 }
-                if iterator.clone() % 50.to_biguint().unwrap() == 0.to_biguint().unwrap() {
+                if iterator.clone() % 5.to_biguint().unwrap() == 0.to_biguint().unwrap() {
                     file.write(s.as_bytes()).unwrap();
                     s = "".to_string()
                 }
