@@ -27,10 +27,13 @@ path = "src/oddi.rs"
 name = "log"
 path = "src/log.rs"
 
-
 [[bin]]
 name = "mersenne"
 path = "src/mersenne.rs"
+
+[[bin]]
+name = "mersennecsv"
+path = "src/mersennecsv.rs"
 
 [[bin]]
 name = "one"
