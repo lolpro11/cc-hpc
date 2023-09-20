@@ -39,12 +39,13 @@ fn main() -> io::Result<()> {
                 let num =  2.to_biguint().unwrap().pow(iterator.clone().to_str_radix(10).to_string().parse::<u32>().unwrap()) - 1.to_biguint().unwrap();
                 let mut temp_num = num.clone();
                 let mut x = 0;
-                while temp_num.rem_euclid(&2.to_biguint().unwrap()) != 0.to_biguint().unwrap() && temp_num != 1.to_biguint().unwrap() {
+                while temp_num != 1.to_biguint().unwrap() {
                     if temp_num.rem_euclid(&2.to_biguint().unwrap()) == 1.to_biguint().unwrap() {
                         temp_num = ((3.to_biguint().unwrap() * temp_num) + 1.to_biguint().unwrap()) / 2.to_biguint().unwrap();
                         x += 1;
                     } else {
-                        break;
+                        temp_num = temp_num / 2.to_biguint().unwrap();
+                        x += 1;
                     }
                     //if temp_num <= num {
                         //break;
@@ -53,7 +54,7 @@ fn main() -> io::Result<()> {
                 if iterator ==  end.clone() + 2.to_biguint().unwrap() {
                     break;
                 }
-                s.push_str(format!("{} {}\n", num.to_str_radix(10), x.to_string()).as_str());
+                s.push_str(format!("2^{}-1 {}\n", iterator.to_str_radix(10), x.to_string()).as_str());
                 if iterator.clone() % 50.to_biguint().unwrap() == 0.to_biguint().unwrap() {
                     file.write(s.as_bytes()).unwrap();
                     s = "".to_string()
