@@ -2,8 +2,8 @@ credentials.json
 tokens.json
 target/
 *.log
-cc.aux
-cc.synctex.gz
+*.aux
+*.synctex.gz
 numbers/*
 oddnumbers/*
 odd-numbers/*

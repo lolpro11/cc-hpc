@@ -1,0 +1,31 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%opening
+\title{Mersenne-Collatz Correlations}
+\author{Joshua Wong}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Mersenne-Collatz Function}
+Prove that for the numbers in the form: $2^r-1$ that the function $w$ can be run $r$ times before it results in an non-integer.
+%\[w^{r}(x) = \frac{3x+1}{2}+\sum_{i=1}^{r-1} \frac{3^{i}x+3^{i}}{2^{(i+1)}}\]
+\[w^{r}(x) = \left(\frac{3}{2}\right)^{r}*(x+1)-1\]
+Let $r_1 = n, r_2 = n+1, n \in \mathbb{N}+1$
+\[\frac{3^n}{2^n}*2^n-1=3^n-1\]
+\[\because n \in \mathbb{N}+1, 3^n-1 \in \mathbb{N}\]
+Now attempt to prove the statement with $r_2, x = 2^{r_1}-1$
+\[\frac{3^{n+1}}{2^{n+1}}*2^n-1=\frac{3^{n+1}}{2}-1\]
+Let $m(x)=\frac{3^{n+1}}{2}-1$
+\[m(2)=\frac{3^{2+1}}{2}-1=\frac{25}{2}\]
+\[\therefore w^r(2^r-1) \in \mathbb{N}\]
+\[\blacksquare\]
+\end{document}
